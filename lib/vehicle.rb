@@ -7,6 +7,7 @@ class Vehicle
       @make = make
       @model = model
       @year = year
+      @id = @@vehicles.length().+(1)
     end
     
     #method for make
@@ -51,12 +52,5 @@ class Vehicle
       american_cars.include?(@make).&(self.age().<=(15))
     end
     
-    #method to give each vehicle a unique id
-    define_method(:initialize) do |make, model, year|
-      @make = make
-      @model = model
-      @year = year
-      @id = @@vehicles.length().+(1)
-    end
   end
   
