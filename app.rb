@@ -25,6 +25,7 @@ require('sinatra')
   erb(:success)
   end
 
+#route to specifications of a particlular vehicle
   get('/vehicles/:id') do
   @vehicle = Vehicle.find(params.fetch("id"))
   erb(:vehicle)
