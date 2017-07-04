@@ -62,6 +62,7 @@ require('rspec')
         expect(test_vehicle.age()).to(eq(17))
       end
     end
+      
     #spec to check if vehicle is worth-buying
     describe("#worth_buying?") do
       it("returns false if the car is not American made and less than 15 years old") do
@@ -77,6 +78,7 @@ require('rspec')
         test_vehicle.save()
         expect(test_vehicle.id()).to(eq(1))
       end
+    end
     
     #spec to find each vehicle by id
     describe(".find") do
@@ -84,8 +86,8 @@ require('rspec')
       test_vehicle = Vehicle.new("Toyota", "Prius", 2000)
       test_vehicle.save()
       test_vehicle2 = Vehicle.new("Toyota", "Corolla", 1999)
-      test_vehicle2.save()
+      test_vehicle2.save() 
       expect(Vehicle.find(test_vehicle.id())).to(eq(test_vehicle))
     end
   end
-  
+end
