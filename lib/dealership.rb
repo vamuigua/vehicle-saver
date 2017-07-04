@@ -50,4 +50,9 @@ class Dealership
       end
       found_dealership
     end
+    
+    #method to add a vehicle to a dealership
+    define_method(:add_vehicle) do |vehicle|
+    @cars.push(vehicle)
+  end
   end
