@@ -7,6 +7,7 @@ class Vehicle
       @make = make
       @model = model
       @year = year
+    #id for each vehicle is initialized here according tolength of array
       @id = @@vehicles.length().+(1)
     end
     
