@@ -2,6 +2,8 @@
 <h1>Add a vehicle to <%= @dealership.name() %> </h1>
 
   <form action="/vehicles" method="post">
+   <!--value attribute will add a dealership_id to the new Vehicle object.-->
+   <!--type attribute to 'hidden' so that this input doesn't show up in the form itself-->
     <input id='dealership_id' name='dealership_id' type='hidden' value='<%= @dealership.id() %>'>
 
     <label for='make'>Vehicle's make:</label>
