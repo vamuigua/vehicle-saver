@@ -1,32 +1,22 @@
 class Vehicle
+    #attribute reader
+    attr_reader(:make, :model, :year, :color, :engine_size, :number_of_doors)
+    
     #array to store vehicles
     @@vehicles = []
     
     #initialize variables
-    define_method(:initialize) do |make, model, year|
-      @make = make
-      @model = model
-      @year = year
-    #id for each vehicle is initialized here according tolength of array
+    define_method(:initialize) do |attributes|
+      @make = attributes.fetch(:make)
+      @model = attributes.fetch(:model)
+      @year = attributes.fetch(:year)
+      @color = attributes.fetch(:color)
+      @engine_size= attributes.fetch(:engine_size)
+      @number_of_doors = attributes.fetch(:number_of_doors)
       @id = @@vehicles.length().+(1)
     end
     
-    #method for make
-    define_method(:make) do
-      @make
-    end
-    
-    #method for model
-    define_method(:model) do
-      @model
-    end
-    
-    #method for year
-    define_method(:year) do
-      @year
-    end
-    
-    #method for make
+    #method for id
     define_method(:id) do
       @id
     end
